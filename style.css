@@ -1,0 +1,235 @@
+* {
+  margin: 0px;
+  padding : 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  list-style: none;
+}
+
+body {
+  /*background-image: url("fond_ecran.jpg");*/
+  background-clip: border-box;
+  background-size: contain;
+  background-repeat: repeat-y;
+  background-color: black;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+p{
+  margin: 3px 0px;
+  font-family: fantasy, sans-serif;
+}
+
+.menu{
+display: inline-block;
+width: 100%;
+margin: 0 auto;
+/*position: sticky;*/
+top: 0px;
+margin-bottom: 5px;
+
+}
+
+.menu ul{
+  list-style-type: none;
+}
+
+.menu li {
+  display: inline;
+  float:left;
+  width: 24.5%;
+  text-align: center;
+  border:solid;
+}
+
+.menu a{
+  display:block;
+  text-decoration: none;
+  color: white;
+  border-bottom: 10px solid transparent;
+  padding: 15px 0px  ;
+  background-color: rgb(4, 8, 221);
+}
+
+.menu a:hover{
+  color: gold;
+  border-bottom: 10px solid cyan ;
+  background-color: green;
+}
+
+.menu ul::after{
+content: "";
+display: table;
+clear: both;
+}
+
+.tel_mail li {
+  float:left;
+  width: 49.6%;
+  text-align: center;
+  border:solid;
+}
+
+.tel_mail a {
+  display:block;
+  text-decoration: none;
+  color: white;
+  border-bottom: 10px solid transparent;
+  padding: 5px 0px  ;
+  background-color: rgb(209, 230, 26);
+  text-decoration: none;
+  pointer-events: none;
+}
+
+h1{
+  text-align: center;
+  font-family: fantasy;
+  background-color: black;
+  font-size: 40px;
+  border: 40px ridge brown;
+  border-radius: 25%;
+}
+h2{
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  font-style: italic;
+  padding-left: 10PX;
+}
+.titre_CV{
+  margin-top: 90px;
+  margin-bottom: 10px;
+  padding: 15px 0px;
+  border-style: groove;
+  border-width: 10px;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-color: rgb(27,15,149);
+  text-align: center;
+}
+.titre_formation{
+  border-color: green;
+  color: rgb(75, 250, 6);
+  padding: 5px 0px;
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+
+.li_formation::before{
+  content: "📖";
+}
+
+.li_formation{
+  font-family: cursive,sans-serif;
+}
+.li_formation em {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+  
+}
+
+.description{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+.titre_experience{
+  margin-top: 15px;
+  margin-bottom: 5px;
+  padding: 5px 0px;
+  color: red;
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+.charge_de_mission::before{
+  content: "✯";
+}
+.charge_de_mission{
+  font-weight: bolder;
+}
+.traitement_des_eaux::before{
+  content: "✯";
+}
+.traitement_des_eaux{
+  font-weight: bolder;
+}
+.test_qa::before{
+  content: "✯";
+}
+.test_qa{
+  font-weight: bolder;
+}
+.nao::before{
+  content: "✯";
+}
+.nao{
+  font-weight: bolder;
+}
+.NIRIO::before{
+  content: "✯";
+}
+
+.NIRIO{
+  font-weight: bolder;
+}
+
+.FPGA::before{
+  content: "✯";
+}
+.FPGA{
+  font-weight: bolder;
+}
+
+.station_meteo::before{
+  content: "✯";
+}
+.station_meteo{
+  font-weight: bolder;
+}
+.description{
+  margin: 5px 0px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.competence_langue{
+  text-align: left;
+}
+.competence_informatique::before{
+  content: "🖥";
+}
+.competence_electronique::before{
+  content: "💡";
+}
+
+.competence_langue::before{
+  content: "🌍";
+  margin-right: 5px ;
+}
+
+.competence_anglais::before{
+  content: "✈";
+}
+.competence_allemand::before{
+  content: "✈";
+}
+
+video{
+  object-fit: contain;
+  object-position: center;
+  position: relative;
+}
+
+.tableau{
+column-count: 2;
+-moz-column-count: 2;
+-webkit-column-count: 2;
+
+}
+
+.titre_competence {
+
+-webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+        page-break-inside: avoid; /* Firefox */
+              break-inside: avoid; /* IE 10+ */
+              break-inside: avoid-column; /* W3C */ 
+break-inside: avoid;
+}
