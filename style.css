@@ -50,6 +50,9 @@ margin-bottom: 5px;
   border-bottom: 10px solid transparent;
   padding: 15px 0px  ;
   background-color: rgb(4, 8, 221);
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Palatino';
 }
 
 .menu a:hover{
