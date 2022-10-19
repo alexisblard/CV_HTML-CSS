@@ -1,0 +1,31 @@
+/* Bienvenue dans le fichier de style de la page Explication.html. 
+C'est ici que nous donnerons les informations sur comment doit etre afficher les elements de la page Explication.html
+la structure pour appliquer des element en css est toujour la meme
+Element {
+    paramètre a mofifier: valeur à donner;
+    paramètre a mofifier: valeur à donner;
+    paramètre a mofifier: valeur à donner;
+}
+Ne pas oublié qu'il y a un ordre de priorité sur l'applications des règles CSS. 
+Dans la majorité des cas, c'est la règle de la balise la plus proche du contenu qui s'applique. Si elle ne contient pas de style particulier, c'est celle de la balise parent (balise precedente)
+qui s'applique. ATTENTION cependant à l'encapsulation (ex : <p> <em> Texte </em> </p>), dans ce cas le style de p ne sera pas appliquer sur Texte, il appliquera celui de em ou de *
+*/
+
+* {/* le caratère " * " est un caractère spécial, il designe TOUS les element de la page */
+    color: red; /*Ici, on dit que tous les texte seront rouge, sauf indication contraire */
+    background-color: aqua; /*ici on change la couleur du fond pour toutes la page*/
+}
+p, p > em,strong{ /*ici on demande l'application du style sur les balise p et les em et strong qui sont enfant d'une balise p 
+    (par le p > em, strong) tandis que la "," indique un element en plus de ce qui est donnée avant*/
+    color: green;
+    background-color: yellow;  
+}
+/* dans l'un de nos paragraphes , nous avons encapsulé du texte dans les balises em et strong. Comme dis plus haut, l'encapsulation 
+enpèche l'application du style de la balise qui l'entoure c'est pour cela que nous devons apporter des elements complémentaire pour 
+que le style s'applique sur tout le paragraphe*/
+
+ul li {
+    /* ici on donne un peu plus de precision sur l'endroit ou appliquer le style, soit les li dans les ul uniquement, 
+    ce qui modifiera le style des elements de liste de toutes les ul*/
+    border: solid 2px gold; /*Par exemple, ici j'ajoute un contour en ligne pleine de 2 pixel de couleur dorré sur les li de mes ul*/
+}
