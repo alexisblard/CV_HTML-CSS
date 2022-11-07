@@ -29,3 +29,19 @@ ul li {
     ce qui modifiera le style des elements de liste de toutes les ul*/
     border: solid 2px gold; /*Par exemple, ici j'ajoute un contour en ligne pleine de 2 pixel de couleur dorré sur les li de mes ul*/
 }
+
+.test {
+    border: solid 2px red;
+    background-color: pink;
+}
+
+
+#p_test:hover{
+background-color: pink;
+}
+
+#p_unique{
+    background-color: brown;
+    border-top: orange;
+    border-top-width: 300px;
+}
