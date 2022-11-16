@@ -1,0 +1,80 @@
+<head> <!-- Balise qui sert a donnée des information au navigateur pour bien comprendre ce que contient la page -->
+    <meta charset="utf-8"> <!-- exemple d'infomation passé au navigateur, mon ensemble de charactère (charset) suis l'encodage UTF-8 (pour les lettre latine et nos caractère spéciaux) -->
+    <title>Formulaire exemple cours</title> <!-- Dédinit le titre de votre onglet -->
+    <link rel="stylesheet" href="./style_formulaire.css"> <!-- balise servant à fournir des liens au navigateurn dans ce cas celui vers le fichier CSS a utiliser pour cette page, mais aussi à d'autres elements comme le fichier javascript 
+    ou pour faire du bootstrap que vous verrez plus tard-->
+    <!-- ICI ON UTILISE LA BONNE METHODE POUR DISSOCIER LE HTML DU CSS, CHACUN SON FICHIER, ATTENTION AU CHEMIN QUI SERA DONNE DANS L'ATTRIBUT HREF,
+    BIEN FAIRE A TTENTION AU CHEMIN ABSOLU( valable peut importe ou l'on se trouve, par exemple C:/bureau/html/explication.css) OU LE CHEMIN RELATIF (qui depend de
+    l'endroit ou est situé le fichier de destination PAR RAPPORT au fichier dans lequel nous écrivons) -->
+</head> <!-- fin de la balise head -->
+<body> <!-- Contient tout le corps ("body") de votre page, tout ce qui sera affiché à l'ecran principalement -->
+     <!-- la nav bar-->
+     <nav>
+        <ul>
+            <li id="li_logo_nav"><a id="a_logo" href="./Explication.html"><img id="logo_nav" src="./fond_ecran.jpg" alt="logo"></a></li>
+            <li><a href="#">Home </a></li>
+            <li><a href="#">Tarif </a></li>
+            <li><a href="./formulaire_explication.html">Contact</a></li>
+        </ul>
+    </nav>
+    <!--partie pour le formulaire-->
+    <form action="/ma-page-de-traitement" method="post"> <!--Partie qui indique ou commence et se termine notre formulaire et précise quel action mener après validation des informations dans l'attribut action-->
+        <div>
+            <label for="name">login :</label> <!-- donne une information sur  le chap qui lui est lié par l'argument for !!! ATENTION il doit etre le meme que l'id!!!!-->
+            <input type="text" id="name" name="user_name"> <!--on choisis d'ajouter une entrer de type zone de texte horizontale, ici on verra ce qui est ecrit-->
+        </div>
+        <div>
+            <label for="mail">password :</label>
+            <input type="password" id="mail" name="user_mail"> <!--on choisis d'ajouter une entrer de type Mot de Pass, ici, ce qui est ecrit est remplacer par des points-->
+        </div>
+       <!-- <div>
+            <label for="msg" >Message :</label>
+            <textarea id="msg" name="user_message"> on met ici une zone de texte avec "Entrez votre texte ici" comme message par defaut
+                Entrez votre texte ici 
+            </textarea>
+        </div>
+            -->
+        <div id="bouton_radio1"> 
+            <h1>question 1</h1>
+            <p>quel est la capital de la france</p>
+            <!-- on ajoute ci dessous des boutons radio. ces boutons on pour but de permettre un choix unique parmis un ensemble de choix.
+            On definie un ensemble de choix en leurs donnant le meme attribut name-->
+            <input type="radio" name="essaie" checked> Marseil 
+            <br>
+            <input type="radio" name="essaie"> Bordeau
+            <br>
+            <input type="radio" name="essaie"> Paris
+        </div>
+        <div id="bouton_radio2">
+            <!-- on ajoute ci dessous des checkbox (case à cocher).Le but de ces boutons est de permettre de valider plusieurs choix, 
+                contrairement au bouton radio -->
+            <input type="checkbox" > on voit ce que ça donne a nouveaux
+            <br>
+            <input type="checkbox" checked> on essaie encore
+        </div>
+        <div>
+            <button type="submit"> <!-- on ajoute ici le bouton d'envoie. celui ci executera ce qu'il y aura d'ecrit dans le fichier identifier par l'attribut action -->
+                TEST
+            </button>
+        </div>
+    </form>
+    <fieldset>
+        <legend> Status</legend>
+        Visiteur<input type="radio" name="=status"> 
+        Abonné Basic <input type="radio" name="=status"> 
+        Abonné Premium <input type="radio" name="=status"> 
+
+    </fieldset>
+
+    <label for="sujet">Sujet</label>
+    <select id="sujet">
+        <option value="">--Please choose an option--</option>
+        <option value="coontact"> Contact</option>
+        <option value="choix1">choix1</option>
+        <option value="choix2">choix2</option>
+    </select>
+    <div id="div-texte_area">
+    <textarea name="test" id="zone_texte" cols="30" rows="10"></textarea>
+    </div>
+</body>
+    
