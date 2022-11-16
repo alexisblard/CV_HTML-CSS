@@ -1,22 +1,22 @@
 /* Bienvenue dans le fichier de style de la page Explication.html. 
 C'est ici que nous donnerons les informations sur comment doit etre afficher les elements de la page Explication.html
 la structure pour appliquer des element en css est toujour la meme
-Element {
-    paramètre a mofifier: valeur à donner;
-    paramètre a mofifier: valeur à donner;
-    paramètre a mofifier: valeur à donner;
+Selecteur {
+    propriété: valeur à donner;
+    propriété: valeur à donner;
+    propriété: valeur à donner;
 }
 Ne pas oublié qu'il y a un ordre de priorité sur l'applications des règles CSS. 
 Dans la majorité des cas, c'est la règle de la balise la plus proche du contenu qui s'applique. Si elle ne contient pas de style particulier, c'est celle de la balise parent (balise precedente)
 qui s'applique. ATTENTION cependant à l'encapsulation (ex : <p> <em> Texte </em> </p>), dans ce cas le style de p ne sera pas appliquer sur Texte, il appliquera celui de em ou de *
 */
 
-* {/* le caratère " * " est un caractère spécial, il designe TOUS les element de la page */
+* {/* le caratère " * " est un caractère spécial, il designe TOUS les elements de la page */
     color: red; /*Ici, on dit que tous les texte seront rouge, sauf indication contraire */
     background-color: aqua; /*ici on change la couleur du fond pour toutes la page*/
 }
 p, p > em,strong{ /*ici on demande l'application du style sur les balise p et les em et strong qui sont enfant d'une balise p 
-    (par le p > em, strong) tandis que la "," indique un element en plus de ce qui est donnée avant*/
+    (par le p > em, strong) tandis que la "," indique un selecteur en plus de ce qui est donnée avant*/
     color: green;
     background-color: yellow;  
 }
@@ -29,19 +29,118 @@ ul li {
     ce qui modifiera le style des elements de liste de toutes les ul*/
     border: solid 2px gold; /*Par exemple, ici j'ajoute un contour en ligne pleine de 2 pixel de couleur dorré sur les li de mes ul*/
 }
-
+/* Ci dessous, notre selecteur fait reference a une classe c'est pourquoi il faut mettre un . devant*/
 .test {
     border: solid 2px red;
     background-color: pink;
 }
-
-
-#p_test:hover{
-background-color: pink;
-}
-
+/* Ci dessous, notre selecteur fait reference a un id c'est pourquoi il faut mettre un # devant*/
 #p_unique{
     background-color: brown;
     border-top: orange;
     border-top-width: 300px;
 }
+
+/* nous utilison ce que l'on appel une pseudo-class. Cela nous permet, entre autre, d'appliquer un style 
+particulier sur l'element comme par exemple ici seulement si la souris le survol (:hover). 
+Il en existe beaucoup d'autres à vous de chercher celui qui vous convient*/
+#p_test:hover{
+background-color: pink;
+}
+
+
+
+#img_pepper{
+    margin-bottom: 10px;
+    margin-right: 5px ;
+    height: 5000px;
+    width: 300px;
+    border: 10px black solid;
+    /*border-radius: 50%;*/
+    float:left;
+}
+#div-pepper{
+overflow: auto;
+}
+#a_logo{
+    margin:0;
+    padding:0;
+    height: 50px;
+    width: 50px;
+}
+
+#logo_nav{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+nav ul{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+nav ul li {
+    float: left;
+
+  }
+nav ul li a {
+    display: block;
+    color: white;
+    background-color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+nav ul li a:hover {
+    display: block;
+    color: white;
+    background-color: rgb(9, 163, 252);
+    text-align: center;
+    padding: 14px 16px;
+    border-bottom: 1px red double;
+}
+
+nav ul li a:active {
+        display: block;
+        color: white;
+        background-color: rgb(20, 207, 13);
+        text-align: center;
+        padding: 17.5px 16px;
+        border-bottom: 10px red double;
+    
+  }
+nav ul li:first-of-type{
+      border: none;
+  }
+
+
+
+table{
+      border: 0.5px red solid;
+      margin-left: 50%;
+      text-align: center;
+}
+th {
+    border-bottom: #333 solid 1px;
+    background-color: transparent;
+}
+td{
+    border: yellow 1px dotted;
+    background-color: transparent;
+}
+tr:hover{
+    background-color: blueviolet;
+}
+
+#bouton_radio{
+    display: inline-block;
+}
+
+
+

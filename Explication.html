@@ -5,13 +5,22 @@
         <title>Note cours HTML AB 09-22</title> <!-- Dédinit le titre de votre onglet -->
         <link rel="stylesheet" href="./style_explication.css"> <!-- balise servant à fournir des liens au navigateurn dans ce cas celui vers le fichier CSS a utiliser pour cette page, mais aussi à d'autres elements comme le fichier javascript 
         ou pour faire du bootstrap que vous verrez plus tard-->
-        <!-- ICI ON UTILISE LA BONNE METHODE POUR DISSOCIER LE HTML DU CSS, CHACUN SON FICHIER, ATTENTION AU CHEMIN QUI SERA DONNE DANS LE PARAMETRE HREF,
+        <!-- ICI ON UTILISE LA BONNE METHODE POUR DISSOCIER LE HTML DU CSS, CHACUN SON FICHIER, ATTENTION AU CHEMIN QUI SERA DONNE DANS L'ATTRIBUT HREF,
         BIEN FAIRE A TTENTION AU CHEMIN ABSOLU( valable peut importe ou l'on se trouve, par exemple C:/bureau/html/explication.css) OU LE CHEMIN RELATIF (qui depend de
         l'endroit ou est situé le fichier de destination PAR RAPPORT au fichier dans lequel nous écrivons) -->
     </head> <!-- fin de la balise head -->
     <body> <!-- Contient tout le corps ("body") de votre page, tout ce qui sera affiché à l'ecran principalement -->
-        <a href="#fin">la fin</a>
-        <h1 class="nec_class"> Mon titre 1 : Regarder le fichier dans un editeur de texte pour avoir toutes les informations </h1> <!-- balise de titre avec la plus grande importance -->
+        <!-- la nav bar-->
+        <nav>
+            <ul>
+                <li id="li_logo_nav"><a id="a_logo" href="./Explication.html"><img id="logo_nav" src="./fond_ecran.jpg" alt="logo"></a></li>
+                <li><a href="#">Home </a></li>
+                <li><a href="#">Tarif </a></li>
+                <li><a href="./formulaire_explication.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <h1 class="nec_class" id="debut"> Mon titre 1 : Regarder le fichier dans un editeur de texte pour avoir toutes les informations </h1> <!-- balise de titre avec la plus grande importance -->
         <h2>Mon titre 2</h2> <!-- balise de titre de niveau 2, importance inferieur a h1 -->
         .
         .
@@ -47,14 +56,14 @@
         <style>
             /*Voici comment l'on met en commentaire en CSS*/
 
-            /* ATTENTION, CECI EXISTE MAIS CE N4EST PAS UNE BONNE PRATIQUE? JE LE MONTRE POUR VOTRE CONNAISSANCE MAIS NE PAS LE FAIRE
+            /* ATTENTION, CECI EXISTE MAIS CE N'EST PAS UNE BONNE PRATIQUE? JE LE MONTRE POUR VOTRE CONNAISSANCE MAIS NE PAS LE FAIRE
             IL VAUT MIEUX AVOIR UN OU PLUSIEURS FICHIERS HTML ET UN OU PLUSIEURS FICHIER POUR LE STYLE (.css)*/
             
-            p { /* on indique l'element sur lequel on veut appliquer les modifications ici, les balises p*/
-              color: #26b72b;/* On indique dans les accolades les elements à modifier et comment. Ici la couleur du fond sera bleue*/
+            p { /* on indique l'element (appelé selecteur) sur lequel on veut appliquer les modifications ici, les balises p*/
+              color: #26b72b;/* On indique dans les accolades les prorpiété à modifier et leurs valeurs. Ici la couleur du text sera bleue*/
               background-color: blue; /* ici on change la couleur de fond des paragraphes*/
-              /* A noter qu'il existe une multitude de paramètre modifiable, n'hesitez pas a rechercher sur internet */
-              /*Les paramètre le plus souvent modifié sont la police (font), la taille de la police (font-size), couleur (color)
+              /* A noter qu'il existe une multitude de propriété modifiable, n'hesitez pas a rechercher sur internet */
+              /*Les propriétés le plus souvent modifié sont la police (font), la taille de la police (font-size), couleur (color)
               etc... */
             }
         </style>
@@ -62,6 +71,37 @@
         <p>This text will be green. Inline styles take precedence over CSS included externally.</p>
             
         <p style="color: blue">The <code>style</code> attribute can override it, though.</p>
+        <div id="div-pepper">
+            <img id="img_pepper" src="./800px-Pepper_the_Robot.jpg"/>
+            <p>on met du texte a coter pour montrer que l'image est en floattant</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aspernatur beatae nobis error, eligendi tempora alias quis suscipit maxime et reiciendis soluta illo? Vero suscipit modi, eligendi facilis natus vel.</p>
+        </div>
+        
+        <a href="#debut" id="apres_image">Retourner au debut de la page</a> <!-- on ajoute une encre qui ramène au debut de la page-->
+        
+        <!-- partie sur les tableaux-->
+        <table> <!-- on indique que l'on va faire un tableau -->
+            <tr> <!-- "table row" ligne du tableau, crée un ligne sur le tableau -->
+                <th>Article 1</th> <!-- utiliser pour créer un case titre de tableau (avec texte en gras par defaut)-->
+                <th>Article 2</th>
+                <th>Article 3</th>
+            </tr>
+            <tr>
+                <td>150 €</td><!-- "table data" definit une case de donnée du tableau -->
+                <td>200 €</td>
+                <td>300 €</td>
+            </tr>
+
+        </table>
+
+        <!-- LE MARGIN ET LE PADDING-->
+        <p>Cette image explique que le margin correspond a la distance entre le border de l'element et ce qui suit tandis que le padding correspond a l'espace entre le border et son contenu</p>
+        <img src="./explication_margin_padding.png" alt="image qui explique ce qu'est le margin et le padding">
+        
+
+    
+    
+    
     
     </body>
 </html>
