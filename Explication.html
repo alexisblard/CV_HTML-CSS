@@ -1,0 +1,128 @@
+<!doctype html> <!-- Indique au navigateur qu'il va lire du HTML -->
+<html> <!-- Balise de reference qui contient tou le HTML de la page -->
+    <head> <!-- Balise qui sert a donnée des information au navigateur pour bien comprendre ce que contient la page -->
+        <meta charset="utf-8"> <!-- exemple d'infomation passé au navigateur, mon ensemble de charactère (charset) suis l'encodage UTF-8 (pour les lettre latine et nos caractère spéciaux) -->
+        <title>Note cours HTML AB 09-22</title> <!-- Dédinit le titre de votre onglet -->
+        <link rel="stylesheet" href="./style_explication.css"> <!-- balise servant à fournir des liens au navigateurn dans ce cas celui vers le fichier CSS a utiliser pour cette page, mais aussi à d'autres elements comme le fichier javascript 
+        ou pour faire du bootstrap que vous verrez plus tard-->
+        <!-- ICI ON UTILISE LA BONNE METHODE POUR DISSOCIER LE HTML DU CSS, CHACUN SON FICHIER, ATTENTION AU CHEMIN QUI SERA DONNE DANS L'ATTRIBUT HREF,
+        BIEN FAIRE A TTENTION AU CHEMIN ABSOLU( valable peut importe ou l'on se trouve, par exemple C:/bureau/html/explication.css) OU LE CHEMIN RELATIF (qui depend de
+        l'endroit ou est situé le fichier de destination PAR RAPPORT au fichier dans lequel nous écrivons) -->
+    </head> <!-- fin de la balise head -->
+    <body> <!-- Contient tout le corps ("body") de votre page, tout ce qui sera affiché à l'ecran principalement -->
+        <!-- la nav bar-->
+        <nav>
+            <ul>
+                <li id="li_logo_nav"><a id="a_logo" href="./Explication.html"><img id="logo_nav" src="./fond_ecran.jpg" alt="logo"></a></li>
+                <li><a href="#">Home </a></li>
+                <li><a href="#">Tarif </a></li>
+                <li><a href="./formulaire_explication.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <h1 class="nec_class" id="debut"> ATTENTION : Regarder le fichier dans un editeur de texte pour avoir toutes les informations </h1> <!-- balise de titre avec la plus grande importance -->
+        <h2>Mon titre 2</h2> <!-- balise de titre de niveau 2, importance inferieur a h1 -->
+        .
+        .
+        .
+        <h6>Mon titre 6 </h6><!-- balise de titre de niveau 6, importance la plus basse -->
+
+        <p id="p_test">Balise pour les paragraphe.
+           Attention, un saut de ligne dans le fichier HTML n'est pas un saut de ligne à l'affichage, il y a une balise pour ça. Regarder dans le code pour voir de quel balise il s'agit
+        </p>
+        <br> <!-- Balise dite orpheline (il n'y a pas de balise fermante qui l'accompagne), qui sert a faire un passage à la ligne dans ou en dehors d'une balise <p></p> -->    
+        <p class="test">
+            Je vous en ai mis une juste avant
+        </p>
+        <ol> <!-- Balise servant a faire une liste d'éléments ORDONNEES (Ordered Liste en anglais, d'ou le ol)-->
+            <li> elemant 1</li> <!-- balise <li> </li> sert a définire un element de cette liste-->
+            <li> element 2</li> <!-- j'ajoute l'element 2 de ma liste -->
+            
+        </ol>
+        <ul class="test"> <!-- Balise servant a faire une liste d'éléments Non ORDONNEES (Unordered Liste en anglais, d'ou le ul)-->
+            <li class="test"> elemant 1</li> <!-- balise <li> </li> sert a définire un element de cette liste-->
+            <li class="test"> element 2</li> <!-- j'ajoute l'element 2 de ma liste -->
+        </ul>
+        <ul>
+            <li>element A</li>
+            <li>elementB</li>
+        </ul>
+        <p>Lorem ipsum <em>dolor sit amet</em>, consectetur <strong>adipiscing elit. Integer dapibus commodo</strong> felis quis porttitor. Fusce eget ex ut massa rhoncus volutpat id et nunc. Nunc lobortis, risus vel blandit tempus, felis elit tempus sapien, nec congue libero ipsum quis turpis. Fusce imperdiet, justo et facilisis faucibus, metus nulla bibendum justo, a facilisis eros odio eu quam. Nulla tellus elit, semper eu nisi non, cursus sollicitudin mi. Cras volutpat ligula tempus magna iaculis tempus. In eu massa non ligula egestas tempus. Suspendisse sit amet ex feugiat, pulvinar ipsum in, rutrum nisl. Proin dapibus eleifend suscipit. Ut imperdiet justo nec tincidunt accumsan. Nam lectus felis, pellentesque ac neque non, fringilla semper sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. <br>
+        Mauris feugiat sapien lacus, at commodo urna rutrum et. Pellentesque gravida dui lorem, sed varius nulla vehicula hendrerit.</p>
+        <em></em> <!--signifie "emphasis" pour mettre l'accent, c'est une balise inline (elle conserve la continuité du texte,ne provoque pas un passage à la ligne)-->
+        <strong></strong> <!--signifie "fort" pour mettre en gras, c'est une balise inline(elle conserve la continuité du texte)-->
+        <!--Exemple d'utilisation du CSS dans  un fichier HTML-->
+        <!--
+        <style>
+            /*Voici comment l'on met en commentaire en CSS*/
+
+            /* ATTENTION, CECI EXISTE MAIS CE N'EST PAS UNE BONNE PRATIQUE? JE LE MONTRE POUR VOTRE CONNAISSANCE MAIS NE PAS LE FAIRE
+            IL VAUT MIEUX AVOIR UN OU PLUSIEURS FICHIERS HTML ET UN OU PLUSIEURS FICHIER POUR LE STYLE (.css)*/
+            
+            p { /* on indique l'element (appelé selecteur) sur lequel on veut appliquer les modifications ici, les balises p*/
+              color: #26b72b;/* On indique dans les accolades les prorpiété à modifier et leurs valeurs. Ici la couleur du text sera bleue*/
+              background-color: blue; /* ici on change la couleur de fond des paragraphes*/
+              /* A noter qu'il existe une multitude de propriété modifiable, n'hesitez pas a rechercher sur internet */
+              /*Les propriétés le plus souvent modifié sont la police (font), la taille de la police (font-size), couleur (color)
+              etc... */
+            }
+        </style>
+            -->
+        <p>This text will be green. Inline styles take precedence over CSS included externally.</p>
+            
+        <p style="color: blue">The <code>style</code> attribute can override it, though.</p>
+        <div id="div-pepper">
+            <img id="img_pepper" src="./800px-Pepper_the_Robot.jpg"/>
+            <p>on met du texte a coter pour montrer que l'image est en floattant</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aspernatur beatae nobis error, eligendi tempora alias quis suscipit maxime et reiciendis soluta illo? Vero suscipit modi, eligendi facilis natus vel.</p>
+        </div>
+        
+        <a href="#debut" id="apres_image">Retourner au debut de la page</a> <!-- on ajoute une encre qui ramène au debut de la page-->
+        
+        <!-- partie sur les tableaux-->
+        <table> <!-- on indique que l'on va faire un tableau -->
+            <tr> <!-- "table row" ligne du tableau, crée un ligne sur le tableau -->
+                <th>Article 1</th> <!-- utiliser pour créer un case titre de tableau (avec texte en gras par defaut)-->
+                <th>Article 2</th>
+                <th>Article 3</th>
+            </tr>
+            <tr>
+                <td>150 €</td><!-- "table data" definit une case de donnée du tableau -->
+                <td>200 €</td>
+                <td>300 €</td>
+            </tr>
+
+        </table>
+
+        <!-- LE MARGIN ET LE PADDING-->
+        <p>Cette image explique que le margin correspond a la distance entre le border de l'element et ce qui suit tandis que le padding correspond a l'espace entre le border et son contenu</p>
+        <img src="./explication_margin_padding.png" alt="image qui explique ce qu'est le margin et le padding">
+        
+        <!-- Partie sur les flexbox-->
+        <!-- La flex box est un outil qui vous permet de faire de la mise en page plus facilement. Par exemple, quand vous avez 
+            besoin de faire des articles cote a cote et qu'ils soit organiser de facon harmonieuse-->
+        <div class="container"> <!--on defini en premier un bloc qui contiendrat tous les elements le conteuneur-->
+            <article> <!-- premier article qui represente une boite-->
+                <h2> ITEM 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, aspernatur assumenda tempore labore aliquam asperiores enim quis laborum, exercitationem quo nisi ipsum adipisci maxime veniam reiciendis natus nulla! Nostrum, laborum.</p>
+            </article>
+
+
+            <article> <!-- deuxième article qui represente une boite-->
+                <h2> ITEM 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, aspernatur assumenda tempore labore aliquam asperiores enim quis laborum, exercitationem quo nisi ipsum adipisci maxime veniam reiciendis natus nulla! Nostrum, laborum.</p>
+            </article>
+
+            <article> <!-- troisième article qui represente une boite-->
+                <h2> ITEM 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, aspernatur assumenda tempore labore aliquam asperiores enim quis laborum, exercitationem quo nisi ipsum adipisci maxime veniam reiciendis natus nulla! Nostrum, laborum.</p>
+            </article>
+            <div class="container_bouton">
+                <button> bouton 1</button>
+                <button> bouton 2</button>
+                <button> bouton 3</button>
+            </div>
+
+        </div>    
+    </body>
+</html>
