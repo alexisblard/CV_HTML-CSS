@@ -56,7 +56,7 @@ background-color: pink;
     height: 5000px;
     width: 300px;
     border: 10px black solid;
-    /*border-radius: 50%;*/
+    border-radius: 50%;
     float:left;
 }
 #div-pepper{
@@ -140,6 +140,31 @@ tr:hover{
 
 #bouton_radio{
     display: inline-block;
+}
+
+.container {
+   
+    display: flex; /* on indique que le container sera en flex pour qu'il arrange les elements qu'il contient comme il faut*/
+    flex-direction: row; /* On choisis le sens dans lequel les elements s'affich en en ligne (row, valeur par defaut) ou en colonne*/
+    justify-content: center; /*cette propriété permet de centrer suivant l'axe  horizontale (de gauche à droite)*/
+    height: 400px; /*on fixe la hauteur de chaque element de la flexbox à 400 pixel pour l'exemple afin que le centrage soit visible*/
+    align-items: center;/* cette propriété permets de centrer verticalement (du hat vers le bas)*/
+    flex-wrap: wrap; /* cette propriété permet de faire passer les elements à la ligne suivante dans le cas ou il dépasserait du cadre 
+    de la page*/
+    margin: 40px;/* je rajoute un margin car j'ai besoin que conteneur soit d&écaler par rapport au bord de la page*/
+    max-width: 1140px; /* je fixe une taille maximal pour mon conteneur*/
+    min-width: 100%;/* je fixe une taille minimum à ma page qui dit q'elle doit faire 100% de l'espace si l'ecran et inferieur au 1140px fixé au dessus*/
+   
+}
+.container_bouton{ /*ici je fait une flexbox dans la felxbox, je donc un container sp&cifique pour la partie bouton afin de pouvoir les organiser differemment si je le souhaite*/
+    width: 600px; /*je fixe la largeur du container à 600px*/
+    display: flex;/* j'indique que c'est une flexbox*/
+    flex-direction: row; /* je choisie sont orientation (row ou column)*/
+    justify-content: center; /* je le centre horizontalement*/
+    column-gap: 10px; /*je laisse un espace de 10 pixels dans le sens des colonnes entre mes elements de mon container*/
+    row-gap: 5px; /* je laisse un espace de 5 pixels dans le cas ou les boutons se retrouve les uns sur les autres*/
+    flex-wrap: wrap;
+
 }
 
 
